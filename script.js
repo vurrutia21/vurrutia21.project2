@@ -1,12 +1,22 @@
-window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
+function printData(countries) {
+    console.log(countries);
+    var countryMarkupList = [];
+    for (let country of countries)
+        countryMarkupList.push(`
+            <div>
+                <h3>${country.name}</h3>
+                <img src="$(country.flag)" alt="flag of ${country.name}" />
+            </div>
+        `);
+}
+    console.log(countryMarkupList.join(""));
 
-document.getElementById('btn').addEventListener('click', () => {
-    console.log('the button was clicked')
-
-    fetch('https://api.giphy.com/v1/gifs/search?api_key=3spFFEQw0z1b6BhXKSih8OsyL1gML0RI=')
+    fetch('https://restcountries.eu/rest/v2/all')
     .then((res) => {
         return res.json();
     }).then((data) => {
+        console.log(data);
     })
-});
+        let imageUrl = data.message;
+        console.log(imageUrl);
+})

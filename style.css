@@ -26,13 +26,15 @@
 .country-img {
     width: 90%;
 }
+.option {
+    text-align: center;
+}
 .select {
     text-align: center;
     color: coral;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.6em;
     letter-spacing: .25em;
-    margin-left: 500px;
 }
 .js-load-countries {
     background-color: rgba(136, 243, 216, 0.911);

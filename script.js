@@ -1,4 +1,4 @@
-function printData(countries) {}
+function printData(countries) {
     var countryMarkupList = [];
     for (let country of countries) {
       countryMarkupList.push(`
@@ -27,7 +27,6 @@ function printData(countries) {}
       .fail(errorHandling);
   }
   
-  // $("[name=region]").change(loadCountries);
   $(".js-load-countries").click(loadCountries);
   
   loadCountries();

@@ -9,16 +9,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1 id="h1">Countries</h1>
+  <body class="body">
+    <h1 id="h1">Countries of the World!</h1>
     <label>
-      Region:
-      <input type="text" name="region" value="Africa" />
+      <span class="select">Select region: </span>
+      <select name="region" class="region">
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
       <button class="js-load-countries">Load countries</button>
     </label>
-
     <div class="js-country-container country-container"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="script.js"></script>

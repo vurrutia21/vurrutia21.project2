@@ -1,27 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Countries of the World</title>
+    <title>
+      Countries of the World
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
     <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
   <body>
-    <h1>Countries of the world</h1>
-      <label>
-        Continent:
-          <select name="Continent">
-            <option value="Africa">Africa</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-            <option value="North America">North America</option>
-            <option value="South America">South America</option>
-          </select>
-      </label>
-    <div class="js-country-container"></div>
+    <h1 id="h1">Countries</h1>
+    <label>
+      Region:
+      <input type="text" name="region" value="Africa" />
+      <button class="js-load-countries">Load countries</button>
+    </label>
+
+    <div class="js-country-container country-container"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

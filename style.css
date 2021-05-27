@@ -26,11 +26,31 @@
 .country-img {
     width: 90%;
   }
+#label {
+    text-align: center;
+}
+.select {
+    text-align: center;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6em;
+    letter-spacing: .25em;
+    margin-left: 20px;
+}
 .js-load-countries {
     background-color: rgba(136, 243, 216, 0.911);
     color: black;
     font-family: 'Bebas Neue', cursive;
     font-size: 1em;
     letter-spacing: .15em;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 4px;
+}
+.js-load-countries:hover {
+    background-color: rgba(56, 109, 96, 0.911);
+}
+.region {
+    padding: 8px;
+    background-color: whitesmoke;
+    border-radius: 4px;
 }

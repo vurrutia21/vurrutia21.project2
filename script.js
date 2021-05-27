@@ -1,22 +1,33 @@
 function printData(countries) {
-    console.log(countries);
     var countryMarkupList = [];
-    for (let country of countries)
-        countryMarkupList.push(`
-            <div>
-                <h3>${country.name}</h3>
-                <img src="$(country.flag)" alt="flag of ${country.name}" />
-            </div>
-        `);
-}
-    console.log(countryMarkupList.join(""));
-
-    fetch('https://restcountries.eu/rest/v2/all')
-    .then((res) => {
-        return res.json();
-    }).then((data) => {
-        console.log(data);
-    })
-        let imageUrl = data.message;
-        console.log(imageUrl);
-})
+    for (let country of countries) {
+      countryMarkupList.push(`
+        <div class="country-card">
+          <h3>${country.name}</h3>
+          <img class="country-img" src="${country.flag}" alt="flag of ${country.name}" />
+        </div>
+      `);
+    }
+    const markup = countryMarkupList.join("");
+  
+    $(".js-country-container").html(markup);
+  }
+  
+  function errorHandling() {
+    const region = $("[name=region]").val();
+    $(".js-country-container").html(`
+      Region ${encodeURIComponent(region)} does not exist.
+    `);
+  }
+  
+  function loadCountries() {
+    const region = $("[name=region]").val();
+    $.get(`https://restcountries.eu/rest/v2/region/${region}`)
+      .done(printData)
+      .fail(errorHandling);
+  }
+  
+  // $("[name=region]").change(loadCountries);
+  $(".js-load-countries").click(loadCountries);
+  
+  loadCountries();

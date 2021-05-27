@@ -1,4 +1,4 @@
-function printData(countries) {
+function printData(countries) {}
     var countryMarkupList = [];
     for (let country of countries) {
       countryMarkupList.push(`
